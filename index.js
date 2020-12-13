@@ -4,21 +4,21 @@ var readlineSync = require('readline-sync');
 var chalk = require('chalk');
  
 var userName = readlineSync.question(chalk.black.bgRed.bold("Hi There! What's your name? \n"));
-console.log("Welcome " + chalk.white.bgBlack.bold(userName) + " to the quiz", chalk.white.bgGray.bold('Guess the Netflix Show'));
-console.log("-------------------------------------------");
+console.log("Welcome " + chalk.white.bgBlack.bold(userName) + " to the quiz", chalk.white.bgGray.bold('Do You Know Krisha?'));
+console.log("--------------------------------------------");
 var keyPress = readlineSync.question(chalk.white.bgGray.bold("QUIZ INSTRUCTIONS:\n") + "Press e to exit at any time during the game\nAnswer by entering correct alphabet\n--------------------\nPress any key to start playing... \n");
 console.log("\n--------------Quiz Starts---------------");
 
 var score = 0;
 var index = 0;
 var queBank = [
-  {question:"\nQ1. In an abstrusely dystopian future, several individuals grapple with the manipulative effects of cutting edge technology in their personal lives and behaviours.\n\na.Dark\nb.Stranger Things\nc.Black Mirror\n", answer:"c"},
-  {question:"\nQ2. Cameras follow the banter and bonding between four fun-loving women from Bollywood’s inner circle as they juggle professions, family and friendship.\n\na.Koffee with Karan\nb.Fabulous lives of Bollywood Wives\nc.Indian Matchmaking\n", answer:"b"},
-  {question:"\nQ3. Eight thieves take hostages and lock themselves in the Royal Mint of Spain as a criminal mastermind manipulates the police to carry out his plan.\n\na.Money Heist\nb.Suits\nc.Breaking Bad\n", answer:"a"},
-  {question:"\nQ4. A married couple suddenly go bankrupt and the only remaining asset they have is an ugly small town named after this show.\n\na.Riverdale\nb.Schitt's Creek\nc.Brooklyn-99\n", answer:"b"},
-  {question:"\nQ5. Follow the lives of six reckless adults living in Manhattan, as they indulge in adventures which make their lives both troublesome and happening.\n\na.Big Bang Theory\nb.Friends\nc.How I met your Mother\n", answer:"b"},
-  {question:"\nQ6. After being set-up by their families, two teenagers strike up a tentative friendship at their summer programme.\n\na.Mismatched\nb.Little Things\nc.Girls Hostel\n", answer:"c"}
-  
+  {question:"\nHow old is Krisha?\na.21\nb.22\nc.23\n", answer:"b"},
+  {question:"\nWhere does she work?\na.Cognizant\nb.Cisco\nc.Capgemini\n", answer:"c"},
+  {question:"\nWhat is her favorite color?\na.Blue\nb.Yellow\nc.Red\n", answer:"b"},
+  {question:"\nWhich is her recent favorite series?\na.Emily in Paris\nb.Mismatched\nc.Gilmore Girls\n", answer:"b"},
+  {question:"\nWhich quality best describes her?\na.Kind\nb.Honest\nc.Driven\n", answer:"c"},
+  {question:"\nIf She Could Only Eat One Pizza Topping, For The Rest Of Her Life, What Would It Be?\na.Olives\nb.Baby Corn\nc.Paneer\n", answer:"c"},
+  {question:"\nIf money didn’t matter, what would her dream job be?\na.Call center\nb.Nanny\nc.Primary Teacher\n", answer:"b"},
 ];
 
 function play(){
@@ -55,13 +55,13 @@ function play(){
 
 play();
 if(score<=0.6*queBank.length){
-  console.log("Umm, you don't watch Netflix much!");
+  console.log("Umm, you don't know Krisha well enough!");
 }
 else if(score>0.6*queBank.length && score<=0.8*queBank.length){
-  console.log("Not bad! You watch Netflix fairly well!");
+  console.log("Not bad! You and Krisha seem like good friends!");
 }
 else{
-  console.log("Voila! Seems like you're a Netflix baby!");
+  console.log("Voila! Seems like you and Krisha are really close friends!");
 }
 
 
